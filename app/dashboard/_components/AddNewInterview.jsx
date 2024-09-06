@@ -18,7 +18,7 @@ import { db } from '@/utils/db';
 import { v4 as uuidv4 } from 'uuid';
 import { useUser } from '@clerk/nextjs';
 import moment from 'moment';
-import Router from 'next/router';
+import { useRouter } from 'next/navigation'
   
 
 const AddNewInterview = () => {
@@ -29,6 +29,7 @@ const AddNewInterview = () => {
     const [loading, setLoading] = useState(false);
     const [jsonResponse, setJsonResponse] = useState([])
     const {user} = useUser()
+    const router = useRouter(); // Initialize useRouter
     
     const onSubmit = async (e) => {
         setLoading(true)
@@ -58,7 +59,7 @@ const AddNewInterview = () => {
     
     if(resp){
             setOpenDialog(false);
-            Router.push('dashboard/interview/'+resp[0]?.mockId)
+            router.push('dashboard/interview/'+resp[0]?.mockId)
         }
     }
     else{
