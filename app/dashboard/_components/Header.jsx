@@ -19,9 +19,9 @@ const Header = () => {
       {!isInterviewPage && (
       <ul className='hidden md:flex gap-6'>
        <Link href='/dashboard'> <li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard' && 'text-primary font-bold'}`}>Dashboard</li></Link>
-        <li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/questions' && 'text-primary font-bold'}`}>Questions</li>
-       <Link href='dashboard/upgrade'> <li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/upgrade' && 'text-primary font-bold'}`}>Upgrade</li> </Link>
-        <li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/how' && 'text-primary font-bold'}`}>How it Works?</li>
+       <Link href='/dashboard/questions'><li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/questions' && 'text-primary font-bold'}`}>Questions</li></Link>
+       <Link href='/dashboard/upgrade'> <li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/upgrade' && 'text-primary font-bold'}`}>Upgrade</li> </Link>
+       <Link href='/dashboard/how'><li className={`hover:text-primary hover:font-bold cursor-pointer transition-all ${path =='/dashboard/how' && 'text-primary font-bold'}`}>How it Works?</li> </Link> 
       </ul>
     )}
       <UserButton/>
